@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .scale-up {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .scale-up:hover {
+            transform: scale(1.1);
+        }
+
+        /* Profile Picture with Light Effect */
+        .profile-pic {
+            position: relative;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            padding: 0.25rem;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ff007b, #ffb100, #007bff, #00ff7f, #ff007b);
+            background-size: 400%;
+            animation: gradient-rotate 8s ease infinite;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-pic img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes gradient-rotate {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .profile-pic::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.6;
+            }
+        }
+
+        /* Custom Title Bar */
+        .title-bar {
+            position: relative;
+            display: inline-block;
+            /*padding: 0.5rem 2rem;*/
+            color: white;
+            /*border-radius: 0.75rem;*/
+            font-weight: bold;
+            text-transform: uppercase;
+            /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+        }
+
+        .title-bar::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 4px;
+            background-color: #60a5fa;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-blue-600 p-10 text-white text-center fade-in">
+        <div class="profile-pic mx-auto mb-4">
+            <img src="C:\Users\shiva\OneDrive\Desktop\IMG_20240828_232120.jpg" alt="Your Name" class="shadow-lg scale-up">
+        </div>
+        <div class="title-bar">
+            <h1 class="text-4xl">SHIVANYA KARUKURI</h1>
+        </div>
+        <p class="text-xl italic mt-4">Aspiring Data Analyst</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="p-8 fade-in">
+        <h2 class="text-3xl font-bold mb-4 border-b-4 border-blue-600 inline-block">About Me</h2>
+        <p class="leading-relaxed text-lg">I am a passionate Data Analyst with a strong foundation in data manipulation, analysis, and visualization. I have experience working with tools like Excel, SQL, Python, and Tableau to derive meaningful insights from data.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-8 bg-white fade-in">
+        <h2 class="text-3xl font-bold mb-4 border-b-4 border-blue-600 inline-block">Skills</h2>
+        <ul class="list-disc pl-5 space-y-2">
+            <li class="text-lg">Data Analysis</li>
+            <li class="text-lg">SQL</li>
+            <li class="text-lg">Python</li>
+            <li class="text-lg">Excel</li>
+            <li class="text-lg">Data Visualization (Looker, Power BI)</li>
+            <li class="text-lg">Machine Learning (Basics)</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-8 fade-in">
+        <h2 class="text-3xl font-bold mb-4 border-b-4 border-blue-600 inline-block">Experience</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Project 1 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-xl transform transition duration-300 ease-in-out scale-up">
+                <h3 class="text-xl font-semibold mb-2">Data Analyst Intern</h3>
+                <p class="mb-2"> 05-2024-June 05-2024
+                    TDS Avenue Code forge, Hyderabad</B><br>
+                    <B>Data Collection & Cleaning:</B> Collected, cleaned, and validated large datasets from multiple sources, ensuring data
+                    integrity and consistency.<BR><B>Statistical Analysis:</B> Conducted statistical analyses to identify trends and correlations, providing actionable
+                    insights to support business decisions. <BR><B>Data Visualization:</B> Developed interactive dashboards and visualizations using Power BI, improving stakeholder
+                    decision-making.<BR><B> Predictive Modeling: </B>Assisted in building predictive models using Python to forecast trends, optimizing
+                    marketing strategies.<BR><B>Reporting:</B> Generated comprehensive reports summarizing data analysis results, highlighting key metrics and
+                    recommending improvements. <BR><B>Collaboration:</B> Worked closely with cross-functional teams to understand data requirements and deliver tailored
+                    analytical solutions.<BR><B>Process Improvement:</B> Implemented process improvements that enhanced data collection efficiency, reducing processing time by 20%</p>
+                <a href="https://github.com/Shivanya-Karukuri/TDS-AVENUE-CODEFORGE/tree/main" class="text-blue-600 font-semibold">View Project and Certificate</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-xl transform transition duration-300 ease-in-out scale-up">
+                <h3 class="text-xl font-semibold mb-2">Acadamic project</h3>
+                <h4><b>Credit Fraud Detection</b></h4>
+                <p class="mb-2">Conducted comprehensive data collection and pre-processing, utilizing historical stock price data from database  Designed and implemented various machine learning algorithms, including Linear Regression, Random Forest  Generated comprehensive reports and presentations to communicate findings and achieved an average prediction accuracy
+                    of 96%, providing valuable insights for investment strategies</p>
+                <a href="https://github.com/Shivanya-Karukuri/TDS-AVENUE-CODEFORGE/blob/main/Credit%20card%20detecton.py" class="text-blue-600 font-semibold">View Project</a>
+            </div>
+
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-8 bg-white fade-in">
+        <h2 class="text-3xl font-bold mb-4 border-b-4 border-blue-600 inline-block">Contact</h2>
+        <form id="contactForm" class="space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium">Name</label>
+                <input type="text" id="name" class="w-full border-gray-300 rounded-md shadow-sm p-2" required>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <input type="email" id="email" class="w-full border-gray-300 rounded-md shadow-sm p-2" required>
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium">Message</label>
+                <textarea id="message" class="w-full border-gray-300 rounded-md shadow-sm p-2" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md transform transition duration-300 ease-in-out hover:scale-105">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-4 text-center text-white">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
